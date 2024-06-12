@@ -3,17 +3,32 @@ function turnTransitionOn() {
     return;
 }
 
-function updateState(direction){
-    size = allImages[counter].clientWidth;
-    position = (counter)*size;
+function scaleCurrentImage() {
+    currnetImage = allImages[counter];
+    allImages.forEach((img) => {
+        img.style.transition = 'transform 0.4s';
 
-    if(direction=='forwards'){
-        slider.style.transform = `translateX(calc(-${position}px - ${(counter)*gapWidht}vw))`;
-    }else if(direction=='backwards'){
-        slider.style.transform = `translateX(calc(-${position}px - ${(counter)*gapWidht}vw))`;
+        if (img === currnetImage) {
+            img.style.transform = 'scale(1.2)';
+        }
+        else {
+            img.style.transform = 'scale(1)';
+        }
+    })
+}
+
+function updateState(direction) {
+    size = allImages[counter].clientWidth;
+    position = (counter) * size;
+
+    if (direction == 'forwards') {
+        slider.style.transform = `translateX(calc(-${position}px - ${(counter) * gapWidht}vw))`;
+    } else if (direction == 'backwards') {
+        slider.style.transform = `translateX(calc(-${position}px - ${(counter) * gapWidht}vw))`;
     }
 
-    console.log(counter, position);
+    scaleCurrentImage();
+
     return;
 }
 
@@ -26,15 +41,15 @@ const nextBtn = document.querySelector('button.next');
 //Conuter
 var counter = 0;
 var position = 0;
-let gapWidht = 7;
+const gapWidht = 7;
 let size = allImages[counter].clientWidth;
+var currnetImage = allImages[counter];
 
 nextImage();
 setTimeout(() => turnTransitionOn(), 50);
 
 function nextImage() {
-    if(counter>=allImages.length-1){
-        debugger
+    if (counter >= allImages.length - 1) {
         return;
     }
     counter++;
@@ -42,8 +57,7 @@ function nextImage() {
 }
 
 function prevImage() {
-    if(counter<1){
-        debugger
+    if (counter < 1) {
         return;
     }
     counter--;
@@ -51,18 +65,17 @@ function prevImage() {
 }
 
 slider.addEventListener('transitionend', () => {
-   let currnetImage = allImages[counter];
-   slider.style.transition = 'none';
+    slider.style.transition = 'none';
 
-   if (currnetImage.classList == 'cloneFirst'){
-    counter = 0;
-    nextImage();
-   }else if(currnetImage.classList == 'cloneLast'){
-    counter = allImages.length - 1;
-    prevImage();
-   }
+    if (currnetImage.classList == 'cloneFirst') {
+        counter = 0;
+        nextImage();
+    } else if (currnetImage.classList == 'cloneLast') {
+        counter = allImages.length - 1;
+        prevImage();
+    }
 
-   setTimeout(()=>{
-    turnTransitionOn();
-   }, 50);
+    setTimeout(() => {
+        turnTransitionOn();
+    }, 50);
 });

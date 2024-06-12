@@ -68,14 +68,41 @@ div.carouselContainer{
   width: 100%;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 ul.slider{
   display: flex;
-  width: 70%;
+  width: 50%;
   gap: 7vw;
 }
 
 .slider figure{
   min-width: 100%;
+}
+
+div.carouselContainer button{
+  position: absolute;
+  margin: 0;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-title);
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+div.carouselContainer button:hover{
+  opacity: 1;
+}
+
+div.carouselContainer button.prev{
+  left: 0;
+}
+div.carouselContainer button.next{
+  right: 0;
 }
