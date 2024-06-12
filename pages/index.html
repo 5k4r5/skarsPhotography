@@ -1,16 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" href="../fonts/OpenSansCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/OpenSansCondensed-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/PermanentMarker-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/landingPage.css">
 </head>
-<body>
-    <!-- Insert header -->
-    <script src="../js/header.js"></script>
-    <main>
 
+<body>
+    <!-- There's a script for the header -->
+    <script src="../js/header.js"></script>
+
+    <main>
+        <section>
+            <h1>Skars Photography</h1>
+            <p>Capturing moments, shooting events, artistic photography, and being an absolute idiot.</p>
+            <nav>
+                <button>Pictures</button>
+                <button>Services</button>
+            </nav>
+        </section>
+        <section class="whoAmI">
+            <figure>
+                <img src="../images/webpage/pictures/ref_photo1.png" alt="">
+                <!-- A picture of me, holding a sign or something -->
+            </figure>
+            <aside>
+                <h2>Who am I?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna..
+                </p>
+                <button>See more!</button>
+            </aside>
+        </section>
+        <section>
+            <img src="" alt=""> <!-- The background of the header -->
+            <h2>Reviews</h2>
+            <div class="carouselContainer">
+                <ul class="slider">
+                    <figure class="cloneLast"><img
+                            src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_006.jpeg" alt="">
+                    </figure>
+                    <figure><img src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_002.jpeg" alt="">
+                    </figure>
+                    <figure><img src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_004.jpeg" alt="">
+                    </figure>
+                    <figure><img src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_003.jpeg" alt="">
+                    </figure>
+                    <figure><img src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_005.jpeg" alt="">
+                    </figure>
+                    <figure><img src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_006.jpeg" alt="">
+                    </figure>
+                    <figure class="cloneFirst"><img
+                            src="../images/webpage/pictures/test_reviews/signal-2024-06-11-224027_002.jpeg" alt="">
+                    </figure>
+                </ul>
+            </div>
+            <button class="next" onclick="nextImage()">Next</button>
+            <button class="prev" onclick="prevImage()">Prev</button>
+        </section>
     </main>
 </body>
+
+<script src="../js/imageSlider.js"></script>
+
 </html>

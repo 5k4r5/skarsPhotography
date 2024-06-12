@@ -2,7 +2,16 @@
   --clr-black: #0F1111;
   --clr-white: #F7F8F8;
   --page-padding: 4rem;
-  --font-size-header: 24px;
+  --font-size-header: clamp(1rem, 1.3vw + 0.2rem, 1.5rem);
+  --font-size-title: clamp(1.6rem, 4vw + 1rem, 4rem);
+  --font-size-btn: clamp(1rem, 1vw + 1rem, 1.3rem);
+  --font-size-description: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
+  --font-family-description: 'Open Sans Condensed';
+  --font-family-title: 'Permanent Marker';
+  --font-family-btn: 'Open Sans Condensed';
+  --font-weight-btn: 600;
+  --width-btn: clamp(10rem, 27vw, 18rem);
+  --height-btn: clamp(2rem, 9vw, 4rem);
 }
 
 *{
@@ -17,21 +26,74 @@ body{
 
 /* HEADER */
 
-header{
+header nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem var(--page-padding); 
+  margin: 1.5rem var(--page-padding); 
   font-size: var(--font-size-header);
+}
+
+header .logo{
+  width: clamp(5rem, 8vw, 11rem);
 }
 
 header a{
   text-decoration: none;
   color: var(--clr-white);
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-header);
+}
+
+header a:first-child{
+  display: flex;
+  align-items: center;
 }
 
 header menu{
   list-style: none;
   display: flex;
   gap: 3rem;
+}
+
+header .hamburger{
+  width: 48px;
+  display: none;
+}
+
+@media screen and (max-width: 810px){
+  header .hamburger{
+    display: block;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  header menu{
+    display: none;
+    list-style: none;
+  }
+  
+  header menu.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    gap: 3rem;
+    position: absolute;
+    top: 0;
+    padding-top: 8rem;
+    padding-right: var(--page-padding);
+    right: 0;
+    background-color: var(--clr-black);
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* Other */
+
+main{
+  margin: 0 var(--page-padding);
 }

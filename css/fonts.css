@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: local('Open Sans Condensed Regular'), local('OpenSansCondensed-Regular'),
+        url('../fonts/OpenSansCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSansCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: local('Open Sans Condensed SemiBold'), local('OpenSansCondensed-SemiBold'),
+        url('../fonts/OpenSansCondensed-SemiBold.woff2') format('woff2'),
+        url('../fonts/OpenSansCondensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'),
+        url('../fonts/PermanentMarker-Regular.woff2') format('woff2'),
+        url('../fonts/PermanentMarker-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

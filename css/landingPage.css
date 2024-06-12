@@ -1,0 +1,80 @@
+h1, h2{
+  font-family: var(--font-family-title);
+  color: var(--clr-white);
+  font-size: var(--font-size-title);
+}
+
+p{
+  font-size: var(--font-size-description);
+  font-family: var(--font-family-description);
+  color: var(--clr-white);
+  margin: 0.5rem 0;
+}
+
+button:not(.next, .prev){
+  background: url('../images/webpage/elements/button_background.png') no-repeat scroll 0 0 transparent ;
+  width: var(--width-btn);
+  height: var(--height-btn);
+  background-size: 100% 100%;
+  border: none;
+  font-family: var(--font-family-btn);
+  font-size: var(--font-size-btn);
+  font-weight: var(--font-weight-btn);
+  cursor: pointer;
+}
+
+nav:has(button) button{
+  margin: 0.5rem 1rem 0 0;
+}
+
+:not(nav) button{
+  margin-top: 1.5rem;
+}
+
+nav:has(button){
+  display: flex;
+  margin-top: 1.5rem;
+  flex-wrap: wrap
+}
+
+section{
+  margin-top: 3rem;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+}
+
+section.whoAmI{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3vw;
+}
+
+img{
+  width: 100%;
+}
+
+figure{
+  align-self: center;
+  width: 100%;
+}
+
+div.carouselContainer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+ul.slider{
+  display: flex;
+  width: 70%;
+  gap: 7vw;
+}
+
+.slider figure{
+  min-width: 100%;
+}
