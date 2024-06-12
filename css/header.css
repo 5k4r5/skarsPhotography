@@ -1,0 +1,66 @@
+/* HEADER */
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem var(--page-padding); 
+    font-size: var(--font-size-header);
+  }
+  
+  header .logo{
+    width: clamp(5rem, 8vw, 11rem);
+  }
+  
+  header a{
+    color: var(--clr-white);
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-header);
+  }
+  
+  header a:first-child{
+    display: flex;
+    align-items: center;
+  }
+  
+  header menu{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  
+  header .hamburger{
+    width: 48px;
+    display: none;
+  }
+  
+  @media screen and (max-width: 810px){
+    header .hamburger{
+      display: block;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    header menu{
+      display: none;
+      list-style: none;
+    }
+    
+    header menu.show{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: end;
+      gap: 3rem;
+      position: absolute;
+      top: 0;
+      padding-top: 8rem;
+      padding-right: var(--page-padding);
+      right: 0;
+      background-color: var(--clr-black);
+      z-index: 1;
+      width: 50%;
+      height: 100%;
+    }
+  }
