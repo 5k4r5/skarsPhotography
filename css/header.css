@@ -16,6 +16,7 @@ header nav{
     color: var(--clr-white);
     font-family: var(--font-family-title);
     font-size: var(--font-size-header);
+    text-decoration: none;
   }
   
   header a:first-child{

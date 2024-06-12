@@ -54,3 +54,14 @@ hamburgerImage.addEventListener('click', (e) => {
         hamburgerImage.src = "../images/webpage/elements/close_button.png"
     }
 });
+
+underlineCurrnetPage();
+
+function underlineCurrnetPage(){
+    let pathname = window.location.pathname;
+    links = document.querySelectorAll('header nav a');
+    console.log(links);
+    links.forEach(link => {
+        link.href.includes(pathname)? link.style.textDecoration = 'underline': true;
+    });
+}

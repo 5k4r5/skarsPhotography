@@ -1,6 +1,7 @@
 :root{
   --clr-black: #0F1111;
   --clr-white: #F7F8F8;
+  --clr-btn-hvr: #dadada;
   --page-padding: 4rem;
   --font-size-header: clamp(1rem, 1.3vw + 0.2rem, 1.5rem);
   --font-size-title: clamp(1.6rem, 4vw + 1rem, 4rem);
@@ -24,11 +25,18 @@ body{
   background-color: var(--clr-black);
 }
 
-
 main{
   margin: 0 var(--page-padding);
 }
 
 button{
   cursor: pointer;
+  transition: scale 0.3s;
+}
+button:not(.next, .prev):hover{
+  scale: 1.1;
+}
+
+address{
+  font-style: normal;
 }

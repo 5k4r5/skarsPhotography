@@ -48,7 +48,7 @@ aside{
   text-align: right;
 }
 
-section.whoAmI{
+section.withPic{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3vw;

@@ -44,7 +44,7 @@ var position = 0;
 const gapWidht = 7;
 let size = allImages[counter].clientWidth;
 var currnetImage = allImages[counter];
-let myTimer = setInterval(nextImage, 3000);
+let myTimer = setInterval(nextImage, 5000);
 
 nextImage();
 setTimeout(() => turnTransitionOn(), 50);
@@ -57,7 +57,7 @@ function nextImage() {
     counter++;
     updateState('forwards');  //move the image
     clearInterval(myTimer);
-    myTimer = setInterval(nextImage, 3000);
+    myTimer = setInterval(nextImage, 5000);
 }
 
 function prevImage() {
