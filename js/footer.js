@@ -1,5 +1,8 @@
 const footer = document.createElement('footer');
 
+const containerDiv = document.createElement('div');
+containerDiv.classList = 'infoContainer';
+
 const footerBackgroundImg = document.createElement('img');
 footerBackgroundImg.classList = 'footerBackgroundImage';
 footerBackgroundImg.alt = 'footer image';
@@ -45,9 +48,10 @@ logoImg.src = '../images/webpage/elements/skars_logo_black_big.png';
 logoImg.alt = 'Logo';
 footerLogo.appendChild(logoImg);
 
-footer.appendChild(contactInfo);
-footer.appendChild(quickLinks);
-footer.appendChild(legal);
+containerDiv.appendChild(contactInfo);
+containerDiv.appendChild(quickLinks);
+containerDiv.appendChild(legal);
+footer.appendChild(containerDiv);
 footer.appendChild(footerLogo);
 
 footer.appendChild(footerBackgroundImg);

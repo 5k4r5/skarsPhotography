@@ -9,6 +9,13 @@ footer {
     position: relative;
 }
 
+.infoContainer{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+}
+
 .footerBackgroundImage{
     position: absolute;
     z-index: -1;
@@ -53,5 +60,19 @@ footer {
 @media screen and (max-width: 872px){
     .footer-logo{
         display: none;
+    }
+    .infoContainer{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1368px){
+    .footerBackgroundImage{
+        object-fit: cover;
+        height: 150%;
+    }
+    .infoContainer{
+        width: 50%;
     }
 }
