@@ -44,9 +44,11 @@ var position = 0;
 const gapWidht = 7;
 let size = allImages[counter].clientWidth;
 var currnetImage = allImages[counter];
+let myTimer = setInterval(nextImage, 3000);
 
 nextImage();
 setTimeout(() => turnTransitionOn(), 50);
+
 
 function nextImage() {
     if (counter >= allImages.length - 1) {
@@ -54,6 +56,8 @@ function nextImage() {
     }
     counter++;
     updateState('forwards');  //move the image
+    clearInterval(myTimer);
+    myTimer = setInterval(nextImage, 3000);
 }
 
 function prevImage() {
@@ -62,6 +66,8 @@ function prevImage() {
     }
     counter--;
     updateState('backwards');   //move the image
+    clearInterval(myTimer);
+    myTimer = setInterval(nextImage, 3000);
 }
 
 slider.addEventListener('transitionend', () => {
