@@ -67,6 +67,7 @@ div.carouselContainer{
   display: flex;
   width: 100%;
   justify-content: center;
+  overflow: hidden;
 }
 
 ul.slider{

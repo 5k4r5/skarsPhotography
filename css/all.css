@@ -97,3 +97,7 @@ header .hamburger{
 main{
   margin: 0 var(--page-padding);
 }
+
+button{
+  cursor: pointer;
+}
