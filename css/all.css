@@ -27,7 +27,7 @@ body{
   background-color: var(--clr-black);
 }
 
-main{
+main > section{
   margin: 0 var(--page-padding);
 }
 
@@ -41,4 +41,22 @@ button:not(.next, .prev):hover{
 
 address{
   font-style: normal;
+}
+
+@media screen and (min-width: 1254px){
+  :root{
+      --page-padding: 10rem;
+  }
+}
+
+@media screen and (max-width: 680px){
+  :root{
+      --page-padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 380px){
+  :root{
+      --page-padding: 1rem;
+  }
 }

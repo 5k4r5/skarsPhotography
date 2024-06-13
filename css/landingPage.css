@@ -10,6 +10,27 @@ h3:not(footer h3){
   font-size: var(--font-size-small-title);
 }
 
+.longTitleContainer{
+  position: relative;
+  margin: 5rem 0;
+}
+
+img.headerBackground{
+  min-height: 5rem;
+  object-fit: cover;
+}
+
+.longTitleContainer h2{
+  position: absolute;
+  color: var(--clr-black);
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 p{
   font-size: var(--font-size-description);
   font-family: var(--font-family-description);
@@ -43,6 +64,10 @@ nav:has(button){
   flex-wrap: wrap
 }
 
+main> section:first-child{
+  margin-top: 5rem;
+}
+
 h2+section{
   margin-top: 1rem;
 }
@@ -55,7 +80,7 @@ h2:has(+section){
   margin-top: 3rem;
 }
 
-section{
+main section{
   margin-top: 3rem;
 }
 
@@ -70,6 +95,10 @@ section.withPic{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3vw;
+}
+
+.withPic figure{
+  align-self: center;
 }
 
 img{
@@ -141,6 +170,8 @@ div.carouselContainer button.next{
   display: flex;
   justify-content: space-between;
   align-items: start;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 #contactMe address ul{
@@ -172,14 +203,42 @@ div.carouselContainer button.next{
   text-decoration: underline;
 }
 
-#contactMe .faq{
-  text-align: right;
+#contactMe .faq h3{
+  text-align: center;
 }
 
 #contactMe summary{
+  color: var(--clr-white);
   font-size: var(--font-size-btn);
   font-family: var(--font-family-description);
   font-weight: 600;
   cursor: pointer;
 }
 
+#contactMe h3:not(.faq h3){
+  color: var(--clr-black);
+}
+
+#contactMe h3{
+  color: var(--clr-black);
+  position: relative;
+  margin-bottom: 3rem;
+  width: calc(var(--font-size-small-title) * 7);
+}
+
+#contactMe .faq img{
+  width: calc(var(--font-size-small-title) * 7);
+  position: absolute;
+  z-index: -1;
+  top: -50%;
+  left: 0;
+}
+
+#contactMe .findMeHere h3 img{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -1ch;
+  height: 2em;
+  width: calc(var(--font-size-small-title) * 8);
+}
