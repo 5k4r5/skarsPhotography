@@ -13,9 +13,9 @@ contactInfo.className = 'footer-section';
 contactInfo.innerHTML = `
         <h3>Contact Information</h3>
         <ul>
-            <li><a href="tel:+359888555491">📞 +359 888 555 491</a></li>
-            <li><a href="mailto:info@skarsphotography.com">📧 info@skarsphotography.com</p></li>
-            <li><a href="https://www.instagram.com/skars_ph/">📷 @skars_ph</p></li>
+            <li><img src="../images/webpage/elements/phone_icon_black.svg" alt=""><a href="tel:+359888555491">+359 888 555 491</a></li>
+            <li><img src="../images/webpage/elements/mail_icon_black.svg" alt=""><a href="mailto:info@skarsphotography.com">info@skarsphotography.com</a></li>
+            <li><img src="../images/webpage/elements/insta_icon_black.svg" alt=""><a href="https://www.instagram.com/skars_ph/">@skars_ph</a></li>
         </ul>
 `;
 

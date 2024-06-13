@@ -4,6 +4,12 @@ h1, h2{
   font-size: var(--font-size-title);
 }
 
+h3:not(footer h3){
+  font-family: var(--font-family-title);
+  color: var(--clr-white);
+  font-size: var(--font-size-small-title);
+}
+
 p{
   font-size: var(--font-size-description);
   font-family: var(--font-family-description);
@@ -35,6 +41,18 @@ nav:has(button){
   display: flex;
   margin-top: 1.5rem;
   flex-wrap: wrap
+}
+
+h2+section{
+  margin-top: 1rem;
+}
+
+section section{
+  margin: 0;
+}
+
+h2:has(+section){
+  margin-top: 3rem;
 }
 
 section{
@@ -106,3 +124,62 @@ div.carouselContainer button.prev{
 div.carouselContainer button.next{
   right: 0;
 }
+
+.usp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.usp article{
+  max-width: 15rem;
+}
+
+#contactMe{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+#contactMe address ul{
+  display:  flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#contactMe address ul li{
+  list-style: none;
+  display: flex;
+  align-items: center
+}
+
+#contactMe a{
+  text-decoration: none;
+  color: var(--clr-white);
+  font-family: var(--font-family-description);
+  font-size: var(--font-size-description);
+}
+
+#contactMe li img{
+  width: 2em;
+  margin-right: 2ch;
+}
+
+#contactMe a:hover{
+  text-decoration: underline;
+}
+
+#contactMe .faq{
+  text-align: right;
+}
+
+#contactMe summary{
+  font-size: var(--font-size-btn);
+  font-family: var(--font-family-description);
+  font-weight: 600;
+  cursor: pointer;
+}
+

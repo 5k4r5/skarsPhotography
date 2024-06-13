@@ -46,6 +46,19 @@ footer {
     padding: 0;
 }
 
+footer address ul{
+  display:  flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+footer address ul li{
+  list-style: none;
+  display: flex;
+  align-items: center
+}
+
 .footer-section a {
     color: var(--clr-black);
     text-decoration: none;
@@ -58,6 +71,11 @@ footer {
 .footer-logo img {
     max-height: 7em;
     object-fit: contain;
+}
+
+footer li img{
+  width: 1.3em;
+  margin-right: 1ch;
 }
 
 @media screen and (max-width: 872px){

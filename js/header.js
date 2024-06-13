@@ -62,6 +62,6 @@ function underlineCurrnetPage(){
     links = document.querySelectorAll('header nav a');
     console.log(links);
     links.forEach(link => {
-        link.href.includes(pathname)? link.style.textDecoration = 'underline': true;
+        link.href.includes(pathname) && !link.href.includes('contact')? link.style.textDecoration = 'underline': true;
     });
 }
