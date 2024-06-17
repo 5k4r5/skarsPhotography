@@ -15,13 +15,14 @@ const portfolioItem = document.createElement('li');
 const contactMeItem = document.createElement('li');
 const landingPageItem = document.createElement('li');
 
-logo.src = "../images/webpage/elements/skars_logo_big.png";
-landingPageLink.href = "../pages/index.html";
-servicesLink.href = "../pages/services.html";
-aboutMeLink.href = "../pages/aboutMe.html";
-portfolioLink.href = "../pages/portfolio.html";
-contactMeLink.href = "../pages/services.html#contactMe";
-hamburgerImage.src = "../images/webpage/elements/hamburger_menu3.png";
+let pathname = window.location.pathname;
+logo.src = pathname.includes('categories')? "../../images/webpage/elements/skars_logo_big.png" : "../images/webpage/elements/skars_logo_big.png";
+landingPageLink.href = pathname.includes('categories')? "../../pages/index.html" : "../pages/index.html";
+servicesLink.href = pathname.includes('categories')? "../../pages/services.html" : "../pages/services.html";
+aboutMeLink.href = pathname.includes('categories')? "../../pages/aboutMe.html" : "../pages/aboutMe.html";
+portfolioLink.href = pathname.includes('categories')? "../../pages/portfolio.html" : "../pages/portfolio.html";
+contactMeLink.href = pathname.includes('categories')? "../../pages/services.html#contactMe" : "../pages/services.html#contactMe";
+hamburgerImage.src = pathname.includes('categories')? "../../images/webpage/elements/hamburger_menu3.png" : "../images/webpage/elements/hamburger_menu3.png";
 hamburgerImage.classList = 'hamburger';
 
 servicesLink.innerText = 'Services';
@@ -47,11 +48,11 @@ document.body.appendChild(header);
 hamburgerImage.addEventListener('click', (e) => {
     if(menu.classList.contains('show')) {
         menu.classList = '';
-        hamburgerImage.src = "../images/webpage/elements/hamburger_menu3.png";
+        hamburgerImage.src = pathname.includes('categories')? "../../images/webpage/elements/hamburger_menu3.png" : "../images/webpage/elements/hamburger_menu3.png";
     }
     else{
         menu.classList = 'show';
-        hamburgerImage.src = "../images/webpage/elements/close_button.png"
+        hamburgerImage.src = pathname.includes('categories')? "../../images/webpage/elements/close_button.png" : "../images/webpage/elements/close_button.png";
     }
 });
 
