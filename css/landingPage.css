@@ -298,3 +298,34 @@ div.carouselContainer button.next{
 figure img.azCutout{
   width: 50%;
 }
+
+body section.background{
+  width: 100%;
+  height: 70vh;
+  margin-top: 0;
+  padding: 0 var(--page-padding);
+  transform: translateX(-4rem);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../images/portfolio/tattoo convention/_MG_8715.jpg');
+  background-size: cover; 
+  background-position: center; 
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 680px){
+  body section.background{
+    transform: translateX(-2rem);
+  }
+}
+
+@media screen and (max-width: 380px){
+  body section.background{
+    transform: translateX(-1rem);
+  }
+}
+
+@media screen and (min-width: 1254px){
+  body section.background{
+    transform: translateX(-10rem);
+  }
+}
